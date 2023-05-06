@@ -3,6 +3,7 @@ package com.employee.employee.systems.controller;
 import java.util.List;
 import java.util.Optional;
 
+import org.aspectj.weaver.World;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -41,6 +42,7 @@ public class EmployeeController {
 //get employee calling by calling an employee specifically by id
 @GetMapping(value="/{empId}")
 public Optional<Employee> findOne(@PathVariable int empId){
+    System.out.println("hello wolrld");
     return employeeRepo.findById(empId);
 }
 
