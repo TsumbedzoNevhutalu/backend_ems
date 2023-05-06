@@ -42,8 +42,7 @@ public class EmployeeController {
 //get employee calling by calling an employee specifically by id
 @GetMapping(value="/{empId}")
 public Optional<Employee> findOne(@PathVariable int empId){
-    System.out.println("hello wolrld");
-    return employeeRepo.findById(empId);
+final ch    return employeeRepo.findById(empId);
 }
 
 
